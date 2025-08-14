@@ -7,7 +7,7 @@ import PopularCity from './components/PopularCity.jsx';
 import WeatherDetails from './components/WeatherDetails.jsx';
 import './styles/base.css';
 
-const API_KEY = 'e67c2d58386db5f8a701968885ef5d75'
+const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
