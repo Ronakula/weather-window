@@ -1,0 +1,206 @@
+/* WeatherDisplay Component Styles */
+
+.weather-display {
+  display: flex;
+  align-items: center;
+  gap: 32px; /* Reduced from 40px for tighter horizontal spacing */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.15)); /* Softer gradient */
+  backdrop-filter: var(--blur-medium);
+  border-radius: 20px; /* Reduced from 24px for a sleeker look */
+  padding: 28px 36px; /* Increased width via right/left padding, reduced height */
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  animation: fadeInUp 0.5s ease-out; /* Reduced duration from 0.6s */
+}
+
+.temperature {
+  font-size: 100px; /* Reduced from 120px to lower height */
+  font-weight: 100;
+  line-height: 0.9; /* Tighter line height */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  background: linear-gradient(135deg, #ffffff, #e0e0e0); /* Warmer gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.location-info {
+  flex: 1;
+  min-width: 0; /* Prevent overflow */
+}
+
+.city-name {
+  font-size: 40px; /* Reduced from 48px */
+  font-weight: 300;
+  margin-bottom: 8px; /* Reduced from 12px */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  letter-spacing: -0.3px; /* Slightly reduced */
+}
+
+.date-time {
+  font-size: 14px; /* Reduced from 16px */
+  color: var(--text-secondary);
+  margin-bottom: 6px; /* Reduced from 8px */
+  font-weight: 300;
+}
+
+.weather-condition {
+  font-size: 18px; /* Reduced from 20px */
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.weather-icon {
+  background: var(--glass-white-light);
+  backdrop-filter: var(--blur-light);
+  border-radius: 16px; /* Reduced from 20px */
+  padding: 12px; /* Reduced from 20px */
+  border: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px; /* Reduced from 120px */
+  min-height: 100px; /* Reduced from 120px */
+}
+
+.weather-icon img {
+  width: 64px; /* Reduced from 80px */
+  height: 64px; /* Reduced from 80px */
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2)); /* Softer shadow */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .weather-display {
+    padding: 24px 32px; /* Adjusted width, reduced height */
+    gap: 28px; /* Reduced from 36px */
+  }
+  
+  .temperature {
+    font-size: 90px; /* Reduced from 108px */
+  }
+  
+  .city-name {
+    font-size: 36px; /* Reduced from 42px */
+  }
+}
+
+@media (max-width: 900px) {
+  .weather-display {
+    padding: 20px 28px; /* Adjusted width, reduced height */
+    gap: 24px; /* Reduced from 32px */
+  }
+  
+  .temperature {
+    font-size: 80px; /* Reduced from 96px */
+  }
+  
+  .city-name {
+    font-size: 32px; /* Reduced from 36px */
+  }
+}
+
+@media (max-width: 768px) {
+  .weather-display {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px; /* Reduced from 24px */
+    padding: 20px 24px; /* Adjusted width, reduced height */
+  }
+  
+  .temperature {
+    font-size: 80px; /* Reduced from 96px */
+    margin-bottom: 12px; /* Reduced from 16px */
+  }
+  
+  .city-name {
+    font-size: 32px; /* Reduced from 36px */
+    margin-bottom: 6px; /* Reduced from 8px */
+  }
+  
+  .date-time {
+    font-size: 12px; /* Reduced from 14px */
+    margin-bottom: 4px;
+  }
+  
+  .weather-condition {
+    font-size: 16px; /* Reduced from 18px */
+  }
+  
+  .weather-icon {
+    min-width: 80px; /* Reduced from 100px */
+    min-height: 80px; /* Reduced from 100px */
+    padding: 10px; /* Reduced from 16px */
+  }
+  
+  .weather-icon img {
+    width: 48px; /* Reduced from 64px */
+    height: 48px; /* Reduced from 64px */
+  }
+}
+
+@media (max-width: 480px) {
+  .temperature {
+    font-size: 60px; /* Reduced from 72px */
+  }
+  
+  .city-name {
+    font-size: 24px; /* Reduced from 28px */
+  }
+  
+  .weather-display {
+    padding: 16px 20px; /* Adjusted width, reduced height */
+    gap: 16px; /* Reduced from 20px */
+  }
+  
+  .weather-icon {
+    min-width: 64px; /* Reduced from 80px */
+    min-height: 64px; /* Reduced from 80px */
+    padding: 8px; /* Reduced from 12px */
+  }
+  
+  .weather-icon img {
+    width: 40px; /* Reduced from 56px */
+    height: 40px; /* Reduced from 56px */
+  }
+}
+
+/* Large screen improvements */
+@media (min-width: 1200px) {
+  .weather-display {
+    padding: 36px 48px; /* Increased width, reduced height */
+    gap: 40px; /* Reduced from 48px */
+  }
+  
+  .temperature {
+    font-size: 120px; /* Reduced from 140px */
+  }
+  
+  .city-name {
+    font-size: 44px; /* Reduced from 52px */
+  }
+  
+  .weather-icon {
+    min-width: 120px; /* Reduced from 140px */
+    min-height: 120px; /* Reduced from 140px */
+    padding: 16px; /* Reduced from 24px */
+  }
+  
+  .weather-icon img {
+    width: 80px; /* Reduced from 96px */
+    height: 80px; /* Reduced from 96px */
+  }
+}
+
+/* Entrance animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px); /* Reduced from 20px */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

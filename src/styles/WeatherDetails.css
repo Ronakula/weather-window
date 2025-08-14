@@ -1,0 +1,90 @@
+/* WeatherDetails Component Styles */
+
+.weather-details {
+  background: var(--glass-white-light);
+  backdrop-filter: var(--blur-medium);
+  border-radius: 12px; /* Reduced from 16px */
+  padding: 16px; /* Reduced from 24px */
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-glass);
+  animation: fadeInUp 0.5s ease-out 0.2s both; /* Reduced duration from 0.6s */
+}
+
+.weather-details h3 {
+  font-size: 16px; /* Reduced from 20px */
+  margin-bottom: 16px; /* Reduced from 24px */
+  font-weight: 400;
+  color: var(--text-primary);
+  text-shadow: var(--shadow-text);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0; /* Reduced from 16px 0 */
+  border-bottom: 1px solid var(--border-glass);
+  font-size: 14px; /* Reduced from 16px */
+  transition: all 0.2s ease;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item:hover {
+  background: var(--glass-white-light);
+  margin: 0 -8px; /* Reduced from 0 -12px */
+  padding: 10px 8px; /* Reduced from 16px 12px */
+  border-radius: 6px; /* Reduced from 8px */
+}
+
+.detail-item span:first-child {
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+.detail-item span:last-child {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .weather-details {
+    padding: 14px; /* Reduced from 20px */
+  }
+  
+  .detail-item {
+    padding: 8px 0; /* Reduced from 12px 0 */
+    font-size: 13px; /* Reduced from 15px */
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-details {
+    padding: 12px; /* Reduced from 16px */
+  }
+  
+  .weather-details h3 {
+    font-size: 14px; /* Reduced from 18px */
+    margin-bottom: 12px; /* Reduced from 16px */
+  }
+  
+  .detail-item {
+    padding: 6px 0; /* Reduced from 10px 0 */
+    font-size: 12px; /* Reduced from 14px */
+  }
+}
+
+/* Entrance animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px); /* Reduced from 20px */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

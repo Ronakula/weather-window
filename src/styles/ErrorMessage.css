@@ -1,0 +1,39 @@
+/* ErrorMessage Component Styles */
+
+.error {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  font-size: 24px;
+  color: var(--accent-red);
+  text-shadow: var(--shadow-text);
+  background: var(--gradient-glass);
+  backdrop-filter: var(--blur-medium);
+  padding: 24px 32px;
+  border-radius: 16px;
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-glass);
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .error {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 20px 24px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    padding: 16px 20px;
+    font-size: 18px;
+  }
+}
