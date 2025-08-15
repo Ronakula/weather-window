@@ -68,8 +68,9 @@ function App() {
   };
 
   const currentBackground = weatherData?.weather?.[0]?.main
-    ? getWeatherBackground(weatherData.weather[0].main)
-    : getWeatherBackground('default');
+  ? getWeatherBackground(weatherData.weather[0].main, weatherData.clouds?.all)
+  : getWeatherBackground('default');
+
 
   return (
     <div
