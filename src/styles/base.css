@@ -17,11 +17,11 @@
   --accent-green: rgba(34, 197, 94, 0.8);
   
   /* Borders */
-  --border-glass: rgba(255, 255, 255, 0.2);
-  --border-glass-strong: rgba(255, 255, 255, 0.3);
+  --border-glass: rgba(111, 87, 87, 0.726);
+  --border-glass-strong: rgba(164, 140, 140, 0.3);
   
   /* Shadows */
-  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.586);
   --shadow-glass-strong: 0 12px 40px rgba(0, 0, 0, 0.15);
   --shadow-text: 0 2px 8px rgba(0, 0, 0, 0.3);
   
@@ -31,7 +31,7 @@
   --blur-strong: blur(12px);
   
   /* Gradients */
-  --gradient-glass: linear-gradient(135deg, rgba(139, 177, 182, 0.3), rgba(255, 255, 255, 0.1));
+  --gradient-glass: linear-gradient(135deg, rgba(125, 146, 149, 0.3), rgba(255, 255, 255, 0.1));
   --gradient-overlay: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
 }
 
@@ -43,10 +43,14 @@
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
+ 
+  font-family: 'Manrope', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
   font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
 }
+
+
 
 /* Main container with glassmorphism overlay */
 .weather-app {
